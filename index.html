@@ -12,7 +12,7 @@
     <div class="resume">
         <div class="header">
             <div class="profile-pic">
-                <img src="./cat.jpg" alt="Ảnh chân dung">
+                <img src="img\cat.jpg" alt="Ảnh chân dung">
             </div>
             <div class="info">
                 <h1 class="name">Trần Thanh Thúy</h1>
@@ -72,5 +72,46 @@
             </div>
         </div>
     </div>
+    <div class="contact-noti-bar" onclick="toggleMessageBox()" id="contactMeButton">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Contact Me</span>
+    </div>
+    
+    <div class="messaging-container" id="messageBox">
+        <div class="messenge-header">New Message</div>
+        
+        <div class="recipient-bar">
+            <input type="text" id="recipient" placeholder="Type a mail or multiple mails">
+        </div>
+        
+        <div class="message-box">
+            <textarea id="message" placeholder="Write a message..."></textarea>
+        </div>
+        
+        <div class="message-actions">
+            <div class="icons">
+                <label for="fileInput">
+                    <i class="fa-solid fa-image" id="attachImage" title="Attach Image"></i>
+                </label>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            
+                <label for="fileAttach">
+                    <i class="fa-solid fa-link" id="attachFile" title="Attach File"></i>
+                </label>
+                <input type="file" id="fileAttach" style="display: none;">
+            </div>
+            <button class="send-btn" id="sendBtn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+    <!-- Modal thông báo -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <p>Tin nhắn của bạn đã được gửi!</p>
+            <button id="closeModal">OK</button>
+        </div>
+    </div>
+    
+    <script src="contact.js"></script>
 </body>
 </html>
